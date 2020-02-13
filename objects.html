@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>object</title>
+</head>
+<body>
+
+</body>
+<script>
+	var obj={
+		name:'suresh',
+		runs:200000
+	}
+	document.write(obj.name);
+	document.write(obj.runs);
+	obj.name="rohit";
+	console.log(obj);
+
+	delete obj.name;
+	console.log(obj);
+
+	var person={
+		name:'sachin',
+		age:20,
+		emailid:'abc@gmail.com'
+	}
+	console.log(person.age);
+	console.log(person.name);
+	console.log(person['emailid']);
+
+	var keys=Object.keys(person);
+	console.log(keys);
+
+	var a={
+		name:'sachin',
+		reuns:20000
+	}
+	Object.freeze(a);
+	a.loc="hyd";
+	a.name="dhoni";
+	delete a.runs;
+	console.log(obj);
+
+	var l={
+		name:'sachin',
+		runs:20000
+	}
+	Object.seal(l);
+	l.loc="delhi";
+	l.name="dhoni";
+	delete l.runs;
+	console.log(l);
+
+
+var obj={}
+console.log(typeof(obj));
+
+var student={
+	name:'suresh',
+	age:23,
+	address:{
+		city:"hyd",
+		country:"india",
+	}
+}
+console.log(student.name);
+console.log(student.address.city);
+
+var stu1={
+	name:'abc',
+	age:23,
+}
+var stu2={
+	name:'abc',
+	age:23
+}
+
+stu2=stu1;
+if(stu1===stu2){
+	console.log("Equal");
+}else{
+	console.log("NotEqual");
+}
+</script>
+</html>

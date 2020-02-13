@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>proto2</title>
+</head>
+<body>
+
+</body>
+<script>
+
+
+	let animal={
+		eats:true,
+		walk(){
+			alert("Animal Walk");
+
+		}
+	};
+	let rabbit={
+		jumps:true,
+		__proto__:animal
+	};
+	rabbit.walk();
+	</script>
+</html>
